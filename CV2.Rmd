@@ -1,0 +1,108 @@
+---
+name: Kaleb
+surname: Ducharme
+position: "Student"
+address: "21 Copper Ln, Rochester, NH 03868"
+phone: (603) 948 5346
+#www: 
+email: "Kaleb.ducharme@unh.edu"
+#github:
+#twitter: 
+headcolor: 414141 # use black color
+date: "`r format(Sys.time(), '%B %Y')`"
+csl: apa-cv.csl 
+output: 
+  vitae::awesomecv:
+    pandoc_args: [--lua-filter="lua/strong.lua"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+rmarkdown::pandoc_version()
+```
+
+# Research Interests
+
+I have been in a biological sciences based major, but through lab experiences I have gained knowledge in some data science techniques. I plan to advance my knowledge further through research in bioinformatics, geonomics, and similar areas.
+
+# Education
+
+```{r}
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Course,
+
+  "Bachelor of Science, Neuroscience and Behavior -Current GPA: 3.97",
+  "Expected May 2023",
+  "University of New Hampshire",
+  "Durham, New Hampshire",
+  "Relevant Coursework: Biostatistics 1, 
+  General Chemistry, 
+  Organic Chemistry, 
+  Biochemistry, 
+  Principles of Genetics, 
+  Human Genetics, 
+  Intro to Computer Science (Python and Java), 
+  Data Science for Life Sciences (in progress),
+  Endocrinology (in progress)",
+
+) %>%
+  detailed_entries(
+    what = Degree,
+    when = Year,
+    with = Institution,
+    where = Where,
+    why = Course,
+  )
+```
+
+# Awards
+```{r}
+tribble(
+  ~Year, ~Name, ~Institution, ~Supp, ~Amount,
+
+  "2019-2022",
+  "Presidential Scholarship",
+  "University of New Hampshire",
+  NA,
+  "$5,000/year"
+
+) %>%
+  detailed_entries(
+    where = Year,
+    with = Name,
+    what = Institution,
+    why = Supp,
+    when = Amount
+  )
+```
+
+# Research Experience
+
+## Affect, Cognition, & Computation Lab
+*Research Assistant for Credit* Spring Semester 2022  
+Advisor: Dr. Caitlyn Mills  
+Ran participants through virtual reality experiments to assess various paradigms of mind wandering. Cleaned the raw data output of the eye-tracking hardware and survey software using Python and R. Analyzed the cleaned data using R and presented initial results.
+
+## Visiual Perception Lab 
+*Volunteer Research Assistant* Fall Semester 2022 - Present  
+Advisor: Dr. Omer Daglar Tanrikulu  
+Currently in the early stages of designing ensemble perception experiments in a virtual reality setting. Advancing knowledge in Python and learning to use the Vizard software (Python based VR development tool) to create the VR experiment.
+
+
+# Presentations
+
+```{r}
+bibliography_entries("presentations.bib")
+```
+
+# Technical Skills
+
+## Complutational
+Intermediate Knowledge in Python and Java, R, Microsoft Suite
+
+## Wet Lab
+Spectrophotometry, Recombinant protein expression in *E. coli*, Benchling for virtual plasmid digestions, Purification of target protein using AKTA start chromatography system (Affinity, gel filtration), SDS-Page, Analysis of active sites of proteins in Chimera
+
+
