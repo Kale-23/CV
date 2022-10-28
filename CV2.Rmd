@@ -99,7 +99,7 @@ bibliography_entries("presentations.bib")
 
 # Technical Skills
 
-## Complutational
+## Computational
 Intermediate Knowledge in Python and Java, R, Microsoft Suite
 
 ## Wet Lab
