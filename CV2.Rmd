@@ -6,7 +6,7 @@ address: "21 Copper Ln, Rochester, NH 03868"
 phone: (603) 948 5346
 #www: 
 email: "Kaleb.ducharme@unh.edu"
-#github:
+github: "Kale-23"
 #twitter: 
 headcolor: 414141 # use black color
 date: "`r format(Sys.time(), '%B %Y')`"
@@ -25,7 +25,7 @@ rmarkdown::pandoc_version()
 
 # Research Interests
 
-I have been in a biological sciences based major, but through lab experiences I have gained knowledge in some data science techniques. I plan to advance my knowledge further through research in bioinformatics, geonomics, and similar areas.
+My major has allowed me to take classes ranging from psychology to biology to computer science. I want to take the knowledge I have gained from these classes, along with research and lab experiences to advance my knowledge further. I believe my favorite classes in biology and computer science have lead me to find bioinformatics, genomics, and similar research areas that are exactly what I want to study in the future.
 
 # Education
 
@@ -37,7 +37,7 @@ tribble(
   "Expected May 2023",
   "University of New Hampshire",
   "Durham, New Hampshire",
-  "Relevant Coursework: Biostatistics 1, 
+  "Relevant Coursework: Biostatistics, 
   General Chemistry, 
   Organic Chemistry, 
   Biochemistry, 
@@ -81,15 +81,14 @@ tribble(
 # Research Experience
 
 ## Affect, Cognition, & Computation Lab
-*Research Assistant for Credit* Spring Semester 2022  
+*Independent Studyt* Spring Semester 2022  
 Advisor: Dr. Caitlyn Mills  
 Ran participants through virtual reality experiments to assess various paradigms of mind wandering. Cleaned the raw data output of the eye-tracking hardware and survey software using Python and R. Analyzed the cleaned data using R and presented initial results.
 
 ## Visiual Perception Lab 
 *Volunteer Research Assistant* Fall Semester 2022 - Present  
 Advisor: Dr. Omer Daglar Tanrikulu  
-Currently in the early stages of designing ensemble perception experiments in a virtual reality setting. Advancing knowledge in Python and learning to use the Vizard software (Python based VR development tool) to create the VR experiment.
-
+Currently working with python and the vizard software (python based VR development tool) to create an experiment to study ensemble perception in the visual field. Planning on starting data collection after winter break and hopefully attending a conference at the end of next semester.
 
 # Presentations
 
@@ -100,7 +99,7 @@ bibliography_entries("presentations.bib")
 # Technical Skills
 
 ## Computational
-Intermediate Knowledge in Python and Java, R, Microsoft Suite
+Knowledge in Python, Java, and R, Microsoft Suite
 
 ## Wet Lab
 Spectrophotometry, Recombinant protein expression in *E. coli*, Benchling for virtual plasmid digestions, Purification of target protein using AKTA start chromatography system (Affinity, gel filtration), SDS-Page, Analysis of active sites of proteins in Chimera
