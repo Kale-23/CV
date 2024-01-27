@@ -2,50 +2,50 @@
 name: Kaleb
 surname: Ducharme
 position: "Student"
-address: "21 Copper Ln, Rochester, NH 03868"
+address: "Department of Molecular, Cellular, and Biomedical Sciences; University of New Hampshire" 
 phone: (603) 948 5346
-#www: 
+
 email: "Kaleb.ducharme@unh.edu"
 github: "Kale-23"
-#twitter: 
+
 headcolor: 414141 # use black color
 date: "`r format(Sys.time(), '%B %Y')`"
 csl: apa-cv.csl 
 output: 
   vitae::awesomecv:
     pandoc_args: [--lua-filter="lua/strong.lua"]
+  latex_engine: xelatex
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
 library(tibble)
-rmarkdown::pandoc_version()
+#options(tinytex.verbose = TRUE)
+
 ```
 
-# Research Interests
+<!-- # Research Interests -->
 
-My major has allowed me to take classes ranging from psychology to biology to computer science. I want to take the knowledge I have gained from these classes, along with research and lab experiences to advance my knowledge further. I believe my favorite classes in biology and computer science have lead me to find bioinformatics, genomics, and similar research areas that are exactly what I want to study in the future.
+<!-- Bioinformatics, Comparative Transcriptomics, Evolutionary Biology -->
 
 # Education
 
 ```{r}
 tribble(
-  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Course,
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ GPA,
 
-  "Bachelor of Science, Neuroscience and Behavior -Current GPA: 3.97",
-  "Expected May 2023",
+  "Master of Science, Genetics",
+  "Expected 2025",
   "University of New Hampshire",
   "Durham, New Hampshire",
-  "Relevant Coursework: Biostatistics, 
-  General Chemistry, 
-  Organic Chemistry, 
-  Biochemistry, 
-  Principles of Genetics, 
-  Human Genetics, 
-  Intro to Computer Science (Python and Java), 
-  Data Science for Life Sciences (in progress),
-  Endocrinology (in progress)",
+  "Current GPA: 4.00",
+
+  "Bachelor of Science, Neuroscience and Behavior",
+  "May 2023",
+  "University of New Hampshire",
+  "Durham, New Hampshire",
+  "Summa cum Laude"
 
 ) %>%
   detailed_entries(
@@ -53,20 +53,27 @@ tribble(
     when = Year,
     with = Institution,
     where = Where,
-    why = Course,
+    why = GPA
   )
 ```
 
 # Awards
+
 ```{r}
 tribble(
   ~Year, ~Name, ~Institution, ~Supp, ~Amount,
 
-  "2019-2022",
+  "2019-2023",
   "Presidential Scholarship",
   "University of New Hampshire",
   NA,
-  "$5,000/year"
+  "$5,000/year",
+
+  "4/2023",
+  "Award of Excellence",
+  "University of New Hampshire",
+  "URC poster presentation",
+  NA
 
 ) %>%
   detailed_entries(
@@ -80,15 +87,49 @@ tribble(
 
 # Research Experience
 
-## Affect, Cognition, & Computation Lab
-*Independent Studyt* Spring Semester 2022  
-Advisor: Dr. Caitlyn Mills  
-Ran participants through virtual reality experiments to assess various paradigms of mind wandering. Cleaned the raw data output of the eye-tracking hardware and survey software using Python and R. Analyzed the cleaned data using R and presented initial results.
+```{r}
+tribble(
+  ~ Advisor, ~ Year, ~ Lab, ~ Where, ~ Points,
 
-## Visiual Perception Lab 
-*Volunteer Research Assistant* Fall Semester 2022 - Present  
-Advisor: Dr. Omer Daglar Tanrikulu  
-Currently working with python and the vizard software (python based VR development tool) to create an experiment to study ensemble perception in the visual field. Planning on starting data collection after winter break and hopefully attending a conference at the end of next semester.
+  "Masters Student - Advisor: Dr. David Plachetzki",
+  "9/2023 - Present",
+  "Plachetzki Lab",
+  "University of New Hampshire",
+  list("Utilizing and developing bioinformatic tools and pathways to analyze the complete transcriptomes of diverse hagfish species contributing to a comprehensive understanding of the protein products within slime glands",
+       "Investigating the evolutionary history of hagfish slime by tracking variations in the genetic makeup of selected genes across species, providing insight into novel adaptations"),
+  
+  "Extension Intern",
+  "5/2023 - 8/2023",
+  "Lakes Lay Monitoring Program",
+  "University of New Hampshire",
+  list("Developed methodology and analysis for qPCR study using python and R into cyanobacteria populations on Lake Winnipesaukee",
+       "Enhanced community engagement in cyanobacteria bloom research through working with local committee",
+       "Assisted in collection, processing, and presentation of quality metrics for lakes in the NH region"),
+  
+  "Research Assistant - Advisor: Dr. Omer Daglar Tanrikulu",
+  "9/2022 - 5/2023",
+  "Visual Perception Lab",
+  "University of New Hampshire",
+  list("Developed virtual reality experimental methodology to study ensemble perception using the python coding lanuage and Vizard development package",
+       "Processed participants through experiment",
+       "Created R script to automatically clean and output data visualizations used in final presentation"),
+  
+  "Independent Study - Advisor: Dr. Caitlyn Mills",
+  "1/2022 - 5/2022",
+  "Affect, Cognition, & Computation Lab ",
+  "University of New Hampshire",
+  list("Processed participants through virtual reality experimentation procedures",
+       "Developed python and R analysis pipelines to clean up and analyze raw eye-tracking data"),
+
+) %>%
+  detailed_entries(
+    what = Advisor,
+    when = Year,
+    with = Lab,
+    where = Where,
+    why = Points
+  )
+```
 
 # Presentations
 
@@ -96,12 +137,37 @@ Currently working with python and the vizard software (python based VR developme
 bibliography_entries("presentations.bib")
 ```
 
-# Technical Skills
+# Teaching Experience
 
-## Computational
-Knowledge in Python, Java, and R, Microsoft Suite
+``` {r}
+tribble(
+  ~Position, ~Year, ~Institution, ~Location, ~Details,
+  
+  "Graduate Teaching Assistant - BCMB659: General Biochemistry Lab",
+  "8/2023 - 12/2023",
+  "University of New Hampshire",
+  "Durham, New Hampshire",
+  "Taught two sections of students, graded lab reports, and helped lab instructor to overhaul class content"
+  
+) %>%
+  detailed_entries(
+    with = Position,
+    when = Year,
+    what = Institution,
+    where = Location,
+    why = Details
+  )
+```
 
-## Wet Lab
-Spectrophotometry, Recombinant protein expression in *E. coli*, Benchling for virtual plasmid digestions, Purification of target protein using AKTA start chromatography system (Affinity, gel filtration), SDS-Page, Analysis of active sites of proteins in Chimera
+# Relevant Skills
+
+**Coding Languages:** Bash, Python, Java, R
+
+**Software:** Slurm managed computer cluster use, ChimeraX, qiime2 commandline bioinformatics platform, Benchling virtual plasmid digestion, Microsoft suite
+
+**Laboratory:** Spectrophotometry, Recombinant protein expression in *E. coli*, Purification of target protein using AKTA start chromatography system (Affinity, gel filtration), SDS-Page, qPCR techniques
+
+
+
 
 
