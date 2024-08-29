@@ -143,12 +143,19 @@ bibliography_entries("presentations.bib")
 tribble(
   ~Position, ~Year, ~Institution, ~Location, ~Details,
   
+    
+  "Graduate Teaching Assistant - GEN711: Introduction to Bioinformatics lab",
+  "1/2024 - 5/2024",
+  "University of New Hampshire",
+  "Durham, New Hampshire",
+  "Developed updated lab structure and materials, taught students, and graded all lab assignments",
+  
   "Graduate Teaching Assistant - BCMB659: General Biochemistry Lab",
   "8/2023 - 12/2023",
   "University of New Hampshire",
   "Durham, New Hampshire",
-  "Taught two sections of students, graded lab reports, and helped lab instructor to overhaul class content"
-  
+  "Taught two sections of students, graded lab reports, and helped lab instructor to overhaul class content",
+
 ) %>%
   detailed_entries(
     with = Position,
